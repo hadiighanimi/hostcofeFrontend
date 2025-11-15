@@ -127,16 +127,20 @@ nav.scrolled {
   border-radius: 2px;
 }
 
-.search-icon {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  fill: white;
+.login-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background-color: #00ffcc;
+  color: #0a0e27 !important;
+  transition: all 200ms linear;
+  font-size: 15px;
+  font-weight: 600;
 }
-
-.search-icon:hover {
-  transform: scale(1.1);
+.login-btn:hover {
+  background: #00e6b8;
+  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
