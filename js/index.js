@@ -266,34 +266,34 @@ const hostingPlans = [
   {
     storage: "1 GB",
     price: "50,000 تومان",
-    url: "https://example.com/buy/1gb", // ⬅️ لینک خرید پلن ۱ گیگ
+    url: "https://hostcofe.com/index.php?rp=/store/shared-host/hst-shtkhy",
   },
   {
     storage: "5 GB",
     price: "120,000 تومان",
-    url: "https://example.com/buy/5gb", // ⬅️ لینک خرید پلن ۵ گیگ
+    url: "https://hostcofe.com/index.php?rp=/store/shared-host/hst-shtkhy",
   },
   {
     storage: "10 GB",
     price: "210,000 تومان",
-    url: "https://example.com/buy/10gb", // ⬅️ لینک خرید پلن ۱۰ گیگ
+    url: "https://hostcofe.com/index.php?rp=/store/shared-host/hst-shtkhy",
   },
   {
     storage: "20 GB",
     price: "390,000 تومان",
-    url: "https://example.com/buy/20gb", // ⬅️ لینک خرید پلن ۲۰ گیگ
+    url: "https://hostcofe.com/index.php?rp=/store/shared-host/hst-shtkhy",
   },
   {
     storage: "50 GB",
     price: "750,000 تومان",
-    url: "https://www.google.com", // ⬅️ لینک خرید پلن ۵۰ گیگ
+    url: "https://hostcofe.com/index.php?rp=/store/shared-host/hst-shtkhy",
   },
 ];
 
 // ۲. متغیرهای DOM و منطق باز و بسته شدن
 const modal = document.getElementById("hostingPricingModal");
 // ⬅️ تغییر مهم: انتخاب تمام دکمه‌های بازکننده با استفاده از کلاس
-const openBtns = document.querySelectorAll(".open-pricing-modal-btn"); 
+const openBtns = document.querySelectorAll(".open-pricing-modal-btn");
 const closeBtn = modal.querySelector(".close-button");
 const tableBody = document.getElementById("dynamicPricingBody");
 
@@ -323,14 +323,14 @@ function generatePricingTable() {
 
 // ۳. منطق باز و بسته شدن مودال
 // ⬅️ تغییر مهم: اعمال تابع باز شدن روی تمام دکمه‌ها
-openBtns.forEach(button => {
-    button.onclick = function () {
-        // هر بار قبل از باز شدن، جدول را از روی داده‌های جدید تولید می‌کنیم
-        generatePricingTable();
+openBtns.forEach((button) => {
+  button.onclick = function () {
+    // هر بار قبل از باز شدن، جدول را از روی داده‌های جدید تولید می‌کنیم
+    generatePricingTable();
 
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // جلوگیری از اسکرول صفحه زیر مودال
-    };
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // جلوگیری از اسکرول صفحه زیر مودال
+  };
 });
 
 closeBtn.onclick = function () {
@@ -346,3 +346,116 @@ window.onclick = function (event) {
 };
 
 /** [محل پایان جاوااسکریپت دینامیک مودال] **/
+
+// --- Hero Slider Logic ---
+const slides = document.querySelectorAll(".hero-slide");
+const prevButton = document.getElementById("prevSlide");
+const nextButton = document.getElementById("nextSlide");
+// const paginationContainer = document.getElementById("sliderPagination");
+let currentSlide = 0;
+let autoSlideInterval;
+
+// ۱. تولید نشانگرهای اسلایدر (Pagination Dots)
+function createPagination() {
+  if (slides.length <= 1) return; // اگر تعداد اسلایدها کمتر از ۲ باشد، ناوبری لازم نیست
+
+  slides.forEach((slide, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("pagination-dot");
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+    dot.addEventListener("click", () => {
+      resetAutoSlide();
+      showSlide(index);
+    });
+    // paginationContainer.appendChild(dot);
+  });
+}
+
+function showSlide(index) {
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  slides.forEach((slide) => slide.classList.remove("active"));
+  // if (paginationContainer.children.length > 0) {
+  //   document
+  //     .querySelectorAll(".pagination-dot")
+  //     .forEach((dot) => dot.classList.remove("active"));
+  // }
+
+  slides[currentSlide].classList.add("active");
+  // if (paginationContainer.children.length > 0) {
+  //   document
+  //     .querySelectorAll(".pagination-dot")
+  //     [currentSlide].classList.add("active");
+  // }
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+function startAutoSlide() {
+  if (slides.length > 1) {
+    autoSlideInterval = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 5000); // زمان ۵ ثانیه برای هر اسلاید
+  }
+}
+
+if (prevButton) {
+  prevButton.addEventListener("click", () => {
+    resetAutoSlide();
+    showSlide(currentSlide - 1);
+  });
+}
+
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    resetAutoSlide();
+    showSlide(currentSlide + 1);
+  });
+}
+
+// ۵. اجرای اولیه - پس از بارگذاری کامل صفحه
+window.addEventListener("load", () => {
+  createPagination();
+  showSlide(currentSlide);
+  startAutoSlide(); // شروع اتوپلی
+});
+
+// --- Accordion Logic (FAQ) ---
+function setupAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+  const faqHeaders = document.querySelectorAll(".faq-header");
+
+  faqHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      // پیدا کردن والد (faq-item)
+      const currentItem = header.parentElement;
+
+      // اگر همین آیتم فعال بود، غیرفعالش کن
+      if (currentItem.classList.contains("active")) {
+        currentItem.classList.remove("active");
+      } else {
+        // ۱. بستن همه آیتم‌های باز دیگر
+        faqItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // ۲. باز کردن آیتم فعلی
+        currentItem.classList.add("active");
+      }
+    });
+  });
+}
+
+// اجرای تابع راه‌اندازی آکاردئون پس از لود شدن کامل DOM
+document.addEventListener("DOMContentLoaded", setupAccordion);

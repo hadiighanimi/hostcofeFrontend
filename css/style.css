@@ -63,10 +63,11 @@ nav.scrolled {
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
 
-.logo-icon svg {
-  width: 24px;
-  height: 24px;
-  fill: #0a0e27;
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .logo-text {
@@ -146,7 +147,6 @@ nav.scrolled {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -257,19 +257,209 @@ nav.scrolled {
 }
 
 .hero-content {
-  position: relative;
   z-index: 10;
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 25px;
+  text-align: right;
+  padding: 50px;
+  z-index: 3;
+}
+
+/* --- Hero Slider Styling - New Implementation --- */
+.hero-slider-section {
+  /* Overrides or complements existing .hero styles */
+  min-height: 75vh; /* ارتفاع حداقل برای بخش هیرو */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-slider-container {
+  /* کانتینر اصلی اسلایدها */
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 50px;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  opacity: 0; /* مخفی کردن اسلایدها */
+  transition: opacity 0.8s ease-in-out; /* انیمیشن فید */
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1; /* نمایش اسلاید فعال */
+  z-index: 2;
+  /* اضافه کردن مجدد استایل شفاف موجود در hero-content قبلی */
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* backdrop-filter: blur(10px); */
   border-radius: 25px;
 }
+
+/* Override existing hero-text/h1/p for a cleaner look in slider */
+.hero-slide .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #00ffcc;
+  /* حذف استایل‌های background-clip و text-fill-color که از .hero-text به ارث رسیده بودند */
+  -webkit-text-fill-color: initial;
+  background: none;
+  background-clip: initial;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.hero-slide .hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+  max-width: none;
+}
+
+.hero-image {
+  max-width: 45%;
+  z-index: 3;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* CTA Buttons Styling */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cta-buttons a {
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.primary-btn {
+  /* رنگ دکمه اصلی - مشابه CTA button قبلی */
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #0a0e27;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.secondary-btn {
+  /* رنگ دکمه ثانویه */
+  background-color: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(0, 255, 204, 0.1);
+  color: #00e6b8;
+  border-color: #00e6b8;
+  transform: translateY(-2px);
+}
+
+/* Slider Navigation Buttons */
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.slider-nav-btn:hover {
+  background: #00ffcc;
+  color: #0a0e27;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-nav-btn.prev {
+  right: 20px;
+}
+
+.slider-nav-btn.next {
+  left: 5px;
+}
+
+/* .slider-pagination {
+  bottom: 60px;
+  position: absolute;
+  z-index: 50;
+} */
+
+/* .pagination-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.pagination-dot:hover {
+  background-color: #00ffcc;
+}
+
+.pagination-dot.active {
+  background-color: #00ffcc;
+  width: 25px;
+  border-radius: 6px;
+  border-color: #00ffcc;
+} */
 
 .hero-text {
   animation: slideInLeft 1s ease-out;
@@ -319,6 +509,7 @@ nav.scrolled {
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
   border: none;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .cta-button:hover {
@@ -522,8 +713,8 @@ nav.scrolled {
   background-clip: text;
 }
 
-/* Stats Cards */
-.stats-grid {
+/* hosts Cards */
+.hosts-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -532,7 +723,7 @@ nav.scrolled {
   align-items: flex-start;
 }
 
-.stat-card {
+.host-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -544,13 +735,13 @@ nav.scrolled {
   min-width: 280px;
 }
 
-.stat-card:hover {
+.host-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(0, 255, 204, 0.3);
 }
 
-.stat-card::before {
+.host-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -561,7 +752,7 @@ nav.scrolled {
   animation: scan 3s linear infinite;
 }
 
-.stat-header {
+.host-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -569,7 +760,7 @@ nav.scrolled {
   margin-bottom: 20px;
 }
 
-.stat-icon {
+.host-icon {
   width: 40px;
   height: 40px;
   background: linear-gradient(
@@ -584,13 +775,13 @@ nav.scrolled {
   font-size: 20px;
 }
 
-.stat-title {
+.host-title {
   font-size: 14px;
   color: #a0a0a0;
   font-weight: 500;
 }
 
-.stat-value {
+.host-value {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -605,7 +796,7 @@ nav.scrolled {
   flex-direction: column;
 }
 
-.btn-stat-card {
+.btn-host-card {
   background: #00ffcc;
   color: #0a0e27;
   padding: 10px 20px;
@@ -621,7 +812,7 @@ nav.scrolled {
   box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
 }
 
-.btn-stat-card:hover {
+.btn-host-card:hover {
   background: #00e6b8;
   box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5);
   transform: translateY(-2px);
@@ -1120,6 +1311,81 @@ nav.scrolled {
   line-height: 1.4;
 }
 
+/* acardion */
+#acardion {
+  padding: 80px 20px;
+  background: #0a0e27;
+}
+
+.accordion-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-header {
+  background-color: #1a224a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-align: right;
+  user-select: none;
+}
+
+.faq-item.active .faq-header {
+  color: #00ffcc;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-left: 10px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: #ff6b6b;
+}
+
+.faq-content {
+  background-color: #0a0e27;
+  color: #e0e0e0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 20px;
+}
+
+.faq-content p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1.8;
+  margin-bottom: 0;
+  text-align: right;
+  user-select: none;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  padding: 0 20px;
+}
+
 /* Footer */
 footer {
   padding: 40px 50px;
@@ -1213,41 +1479,118 @@ footer {
   background: rgba(0, 255, 204, 0.1);
   color: #00ffcc;
 }
+/* --- Media Queries - Optimized and Consolidated --- */
 
+/* Tablet Landscape and large devices (<= 1200px) */
 @media (max-width: 1200px) {
   .charts-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 968px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
+/* Tablet Portrait and smaller devices (<= 992px) */
+@media (max-width: 992px) {
+  /* تنظیمات عمومی ناوبری */
+  nav.scrolled {
+    padding: 15px 20px;
   }
 
+  /* تنظیمات عمومی بخش هیرو (شامل استایل‌های قدیمی و جدید) */
+  .hero-slider-section {
+    min-height: 65vh;
+  }
+
+  /* تنظیمات کروسل هیرو (جدید) */
+  .hero-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    justify-content: center;
+  }
+
+  .hero-slider-container {
+    padding: 0 15px;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    /* تلفیق منطق 968px و 992px برای .hero-content */
+    grid-template-columns: 1fr; /* منطق قدیمی 968px */
+    order: 2;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-slide .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-slide .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-image {
+    order: 1;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* استایل‌های بخش متنی قدیمی ( hero-text ) - برای جلوگیری از شکست */
   .hero-text h1 {
-    font-size: 48px;
+    font-size: 48px; /* منطق 968px */
   }
 
   .hero-text {
-    padding-top: 160px;
+    padding-top: 160px; /* منطق 968px */
+  }
+  /* پایان تنظیمات تلفیقی هیرو */
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cta-buttons a {
+    min-width: 200px;
+  }
+
+  .slider-nav-btn {
+    top: 60%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+
+  .slider-nav-btn.prev {
+    right: 5px;
+  }
+
+  .slider-nav-btn.next {
+    left: 5px;
   }
 }
 
+/* Mobile Devices (<= 768px) */
 @media (max-width: 768px) {
   nav {
     padding: 15px 20px;
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* نمایش دکمه همبرگر */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* پنهان کردن منوی اصلی */
   }
 
+  /* کاهش بیشتر سایز فونت برای صفحه‌های کوچک‌تر */
   .hero-text h1 {
     font-size: 36px;
   }
@@ -1266,5 +1609,74 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .faq-header {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+}
+
+/* Very Small Mobile Devices (<= 480px) */
+@media (max-width: 450px) {
+  /* تنظیمات کروسل هیرو (فونت کوچک‌تر) */
+  .hero-slide .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-slide .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 90%;
+  }
+
+  .slider-pagination {
+    bottom: 40px;
+  }
+
+  /* --- Modal Responsive Adjustments --- */
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 15px;
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .close-button {
+    font-size: 30px;
+    top: 5px;
+  }
+
+  /* رسپانسیو کردن جدول قیمت‌گذاری با اسکرول افقی */
+  .pricing-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .pricing-table {
+    width: 400px;
+    min-width: 400px;
+  }
+
+  .pricing-table thead th {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .pricing-table td {
+    padding: 10px;
+  }
+
+  .modal-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
   }
 }
