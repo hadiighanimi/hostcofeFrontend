@@ -45,9 +45,9 @@
         <ul class="nav-links">
           <li><a href="#home" class="active">خانه</a></li>
           <li><a href="#hosts">هاست ها</a></li>
-          <li><a href="#analytics">Analytics</a></li>
-          <li><a href="#reports">Reports</a></li>
+          <li><a href="#domain">دامنه</a></li>
           <li><a href="#contact">تماس با ما</a></li>
+          <li><a href="#acardion">سوالات متداول</a></li>
         </ul>
         <a href="/index.php" class="login-btn" target="_blank">
           ورود/ثبت نام
@@ -61,9 +61,9 @@
       <ul class="nav-links-mobile" id="navLinksMobile">
         <li><a href="#home" class="active">خانه</a></li>
         <li><a href="#hosts">هاست ها</a></li>
-        <li><a href="#analytics">Analytics</a></li>
-        <li><a href="#reports">Reports</a></li>
+        <li><a href="#domain">دامنه</a></li>
         <li><a href="#contact">تماس با ما</a></li>
+        <li><a href="#acardion">سوالات متداول</a></li>
       </ul>
     </nav>
 
@@ -721,345 +721,63 @@
       </div>
     </section>
 
-    <!-- Analytics Section -->
-    <section class="analytics-section" id="analytics">
-      <div class="hosts-container">
-        <h2 class="section-title">Advanced Analytics</h2>
+    <!-- domain Section -->
+    <section class="domain-section" id="domain" dir="rtl">
+      <div class="section-container">
+        <h2 class="section-title">ثبت و انتقال دامنه</h2>
+        <p class="section-subtitle">
+          دامنه مورد نظر خود را جستجو کنید و یا دامنه‌های فعلی خود را به
+          سرویس‌های ما منتقل نمایید.
+        </p>
 
-        <!-- Key Metrics Overview -->
-        <div class="metrics-grid">
-          <div class="metric-item">
-            <div class="metric-value">2.4M</div>
-            <div class="metric-label">Page Views</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value">156K</div>
-            <div class="metric-label">Unique Visitors</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value">4.2min</div>
-            <div class="metric-label">Avg Session</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value">68%</div>
-            <div class="metric-label">Return Rate</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value">89</div>
-            <div class="metric-label">NPS Score</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value">3.2K</div>
-            <div class="metric-label">Daily Active</div>
-          </div>
-        </div>
+        <div class="domain-content-grid">
 
-        <!-- Chart Cards -->
-        <div class="charts-grid">
-          <div class="chart-card">
-            <div class="chart-header">
-              <h3 class="chart-title">📈 Monthly Trends</h3>
-              <div class="chart-options">
-                <span class="chart-option active">2024</span>
-                <span class="chart-option">2023</span>
-                <span class="chart-option">2022</span>
-              </div>
-            </div>
-            <div class="chart-container">
-              <div class="bar-chart" id="barChart">
-                <div class="bar" style="height: 60%">
-                  <span class="bar-value">120</span>
-                  <span class="bar-label">Jan</span>
-                </div>
-                <div class="bar" style="height: 80%">
-                  <span class="bar-value">180</span>
-                  <span class="bar-label">Feb</span>
-                </div>
-                <div class="bar" style="height: 45%">
-                  <span class="bar-value">90</span>
-                  <span class="bar-label">Mar</span>
-                </div>
-                <div class="bar" style="height: 70%">
-                  <span class="bar-value">140</span>
-                  <span class="bar-label">Apr</span>
-                </div>
-                <div class="bar" style="height: 90%">
-                  <span class="bar-value">200</span>
-                  <span class="bar-label">May</span>
-                </div>
-                <div class="bar" style="height: 65%">
-                  <span class="bar-value">130</span>
-                  <span class="bar-label">Jun</span>
-                </div>
-                <div class="bar" style="height: 75%">
-                  <span class="bar-value">150</span>
-                  <span class="bar-label">Jul</span>
-                </div>
-                <div class="bar" style="height: 85%">
-                  <span class="bar-value">170</span>
-                  <span class="bar-label">Aug</span>
-                </div>
-              </div>
-            </div>
+          <div class="domain-feature-card scroll-reveal" data-index="0">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title"><b>جستجوی هوشمند و ثبت فوری</b>
+            </h3>
+            <p>
+              <b>یافتن نام دامنه ایده‌آل شما دیگر یک چالش نیست.</b> موتور جستجوی
+              هوشمند ما، دامنه‌های خالی در تمام پسوندهای عمومی (.com, .net) و
+              ملی (.ir) را در کسری از ثانیه پیدا می‌کند و فرآیند ثبت را به صورت
+              کاملاً خودکار و فوری انجام می‌دهد.
+            </p>
+            <a href="#register" class="cta-link">شروع جستجوی دامنه &larr;</a>
           </div>
 
-          <div class="chart-card">
-            <div class="chart-header">
-              <h3 class="chart-title">📊 Growth Analytics</h3>
-              <div class="chart-options">
-                <span class="chart-option active">Week</span>
-                <span class="chart-option">Month</span>
-                <span class="chart-option">Year</span>
-              </div>
-            </div>
-            <div class="chart-container">
-              <div class="line-chart">
-                <svg class="line-chart-svg" viewBox="0 0 500 300">
-                  <defs>
-                    <lineargradient
-                      id="gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%">
-                      <stop
-                        offset="0%"
-                        style="stop-color: #00ffcc; stop-opacity: 0.5" />
-                      <stop
-                        offset="100%"
-                        style="stop-color: #00ffcc; stop-opacity: 0" />
-                    </lineargradient>
-                  </defs>
-                  <!-- Grid lines -->
-                  <line
-                    x1="0"
-                    y1="50"
-                    x2="500"
-                    y2="50"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="100"
-                    x2="500"
-                    y2="100"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="150"
-                    x2="500"
-                    y2="150"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="200"
-                    x2="500"
-                    y2="200"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="250"
-                    x2="500"
-                    y2="250"
-                    class="chart-grid-line" />
-
-                  <!-- Area -->
-                  <path
-                    d="M 0,200 L 62,180 L 125,150 L 187,170 L 250,120 L 312,140 L 375,100 L 437,130 L 500,110 L 500,300 L 0,300 Z"
-                    class="chart-area" />
-
-                  <!-- Line -->
-                  <path
-                    d="M 0,200 L 62,180 L 125,150 L 187,170 L 250,120 L 312,140 L 375,100 L 437,130 L 500,110"
-                    class="chart-line" />
-
-                  <!-- Dots -->
-                  <circle cx="0" cy="200" class="chart-dot" />
-                  <circle cx="62" cy="180" class="chart-dot" />
-                  <circle cx="125" cy="150" class="chart-dot" />
-                  <circle cx="187" cy="170" class="chart-dot" />
-                  <circle cx="250" cy="120" class="chart-dot" />
-                  <circle cx="312" cy="140" class="chart-dot" />
-                  <circle cx="375" cy="100" class="chart-dot" />
-                  <circle cx="437" cy="130" class="chart-dot" />
-                  <circle cx="500" cy="110" class="chart-dot" />
-                </svg>
-              </div>
-            </div>
+          <div class="domain-feature-card scroll-reveal" data-index="1">
+            <div class="feature-icon">🛡️</div>
+            <h3 class="feature-title"><b>انتقال رایگان همراه با تمدید
+                هدیه</b></h3>
+            <p>
+              <b>دامنه‌های خود را با اطمینان کامل به ما بسپارید.</b> ما انتقال
+              دامنه‌های شما را بدون قطعی سرویس و به صورت رایگان انجام می‌دهیم.
+              همچنین، پس از انتقال موفق، یک دوره تمدید رایگان (بسته به پسوند) از
+              ما هدیه بگیرید.
+            </p>
+            <a href="#transfer" class="cta-link">انتقال دامنه موجود &larr;</a>
           </div>
 
-          <div class="chart-card">
-            <div class="chart-header">
-              <h3 class="chart-title">🌍 Geographic Distribution</h3>
-              <div class="chart-options">
-                <span class="chart-option active">Global</span>
-                <span class="chart-option">US</span>
-                <span class="chart-option">EU</span>
-              </div>
-            </div>
-            <div class="chart-container">
-              <div class="bar-chart">
-                <div
-                  class="bar"
-                  style="
-                    height: 85%;
-                    background: linear-gradient(
-                      180deg,
-                      #ff6b6b 0%,
-                      #ff8e53 100%
-                    );
-                  ">
-                  <span class="bar-value">42%</span>
-                  <span class="bar-label">USA</span>
-                </div>
-                <div
-                  class="bar"
-                  style="
-                    height: 65%;
-                    background: linear-gradient(
-                      180deg,
-                      #4ecdc4 0%,
-                      #44a08d 100%
-                    );
-                  ">
-                  <span class="bar-value">28%</span>
-                  <span class="bar-label">EU</span>
-                </div>
-                <div
-                  class="bar"
-                  style="
-                    height: 45%;
-                    background: linear-gradient(
-                      180deg,
-                      #45b7d1 0%,
-                      #96c93d 100%
-                    );
-                  ">
-                  <span class="bar-value">18%</span>
-                  <span class="bar-label">Asia</span>
-                </div>
-                <div
-                  class="bar"
-                  style="
-                    height: 25%;
-                    background: linear-gradient(
-                      180deg,
-                      #f093fb 0%,
-                      #f5576c 100%
-                    );
-                  ">
-                  <span class="bar-value">12%</span>
-                  <span class="bar-label">Other</span>
-                </div>
-              </div>
-            </div>
+          <div class="domain-feature-card scroll-reveal" data-index="2">
+            <div class="feature-icon">⚙️</div>
+            <h3 class="feature-title"><b>مدیریت حرفه‌ای و ابزارهای
+                توسعه‌دهنده</b></h3>
+            <p>
+              <b>کنترل کامل در دستان شماست.</b> به ابزارهای پیشرفته مدیریت
+              رکوردهای DNS (A, CNAME, MX, TXT) و تنظیمات WHOIS دسترسی داشته
+              باشید. همچنین، قابلیت قفل دامنه (Domain Lock) برای بالاترین سطح
+              امنیت فراهم شده است.
+            </p>
+            <a href="#management" class="cta-link">دسترسی به پنل مدیریت
+              &larr;</a>
           </div>
 
-          <div class="chart-card">
-            <div class="chart-header">
-              <h3 class="chart-title">📱 Device Analytics</h3>
-              <div class="chart-options">
-                <span class="chart-option active">This Month</span>
-                <span class="chart-option">Last Month</span>
-                <span class="chart-option">YTD</span>
-              </div>
-            </div>
-            <div class="chart-container">
-              <div class="line-chart">
-                <svg class="line-chart-svg" viewBox="0 0 500 300">
-                  <defs>
-                    <lineargradient
-                      id="gradient2"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%">
-                      <stop
-                        offset="0%"
-                        style="stop-color: #ff6b6b; stop-opacity: 0.5" />
-                      <stop
-                        offset="100%"
-                        style="stop-color: #ff6b6b; stop-opacity: 0" />
-                    </lineargradient>
-                  </defs>
-                  <!-- Grid lines -->
-                  <line
-                    x1="0"
-                    y1="60"
-                    x2="500"
-                    y2="60"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="120"
-                    x2="500"
-                    y2="120"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="180"
-                    x2="500"
-                    y2="180"
-                    class="chart-grid-line" />
-                  <line
-                    x1="0"
-                    y1="240"
-                    x2="500"
-                    y2="240"
-                    class="chart-grid-line" />
-
-                  <!-- Mobile Line -->
-                  <path
-                    d="M 0,180 L 71,160 L 142,140 L 214,120 L 285,100 L 357,90 L 428,80 L 500,70"
-                    stroke="#ff6b6b"
-                    stroke-width="2"
-                    fill="none"
-                    filter="drop-shadow(0 0 10px rgba(255, 107, 107, 0.5))" />
-
-                  <!-- Desktop Line -->
-                  <path
-                    d="M 0,220 L 71,210 L 142,200 L 214,190 L 285,185 L 357,180 L 428,175 L 500,170"
-                    stroke="#00ffcc"
-                    stroke-width="2"
-                    fill="none"
-                    filter="drop-shadow(0 0 10px rgba(0, 255, 204, 0.5))" />
-
-                  <!-- Mobile dots -->
-                  <circle cx="0" cy="180" r="4" fill="#ff6b6b" />
-                  <circle cx="71" cy="160" r="4" fill="#ff6b6b" />
-                  <circle cx="142" cy="140" r="4" fill="#ff6b6b" />
-                  <circle cx="214" cy="120" r="4" fill="#ff6b6b" />
-                  <circle cx="285" cy="100" r="4" fill="#ff6b6b" />
-                  <circle cx="357" cy="90" r="4" fill="#ff6b6b" />
-                  <circle cx="428" cy="80" r="4" fill="#ff6b6b" />
-                  <circle cx="500" cy="70" r="4" fill="#ff6b6b" />
-
-                  <!-- Desktop dots -->
-                  <circle cx="0" cy="220" r="4" fill="#00ffcc" />
-                  <circle cx="71" cy="210" r="4" fill="#00ffcc" />
-                  <circle cx="142" cy="200" r="4" fill="#00ffcc" />
-                  <circle cx="214" cy="190" r="4" fill="#00ffcc" />
-                  <circle cx="285" cy="185" r="4" fill="#00ffcc" />
-                  <circle cx="357" cy="180" r="4" fill="#00ffcc" />
-                  <circle cx="428" cy="175" r="4" fill="#00ffcc" />
-                  <circle cx="500" cy="170" r="4" fill="#00ffcc" />
-
-                  <!-- Labels -->
-                  <text x="20" y="50" fill="#ff6b6b" font-size="12">
-                    Mobile
-                  </text>
-                  <text x="20" y="35" fill="#00ffcc" font-size="12">
-                    Desktop
-                  </text>
-                </svg>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- Reports Section -->
-    <section class="reports-section" id="reports">
+    <!--<section class="reports-section" id="reports">
       <div class="hosts-container">
         <h2 class="section-title">Reports & Insights</h2>
         <div class="info-grid">
@@ -1113,7 +831,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact" dir="rtl">
@@ -1230,70 +948,113 @@
         <div class="faq-accordion" id="faqAccordionCustom">
 
           <!-- one -->
-          <div class="faq-item">
-            <div class="faq-header" data-index="0">
-              🛡️ چگونه امنیت سایت من ۲۴ ساعته حفظ می‌شود؟
-              <span class="faq-icon">+</span>
+            <div class="faq-item">
+              <div class="faq-header" data-index="0">
+                🛡️ چگونه امنیت سایت من ۲۴ ساعته حفظ می‌شود؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>ما از سیستم‌های <strong>مانیتورینگ فعال و هوشمند</strong>
+                  بهره
+                  می‌بریم که
+                  سرور شما را دقیقه به دقیقه برای شناسایی هرگونه فعالیت مشکوک و
+                  تلاش برای نفوذ رصد می‌کنند. علاوه بر فایروال‌های پیشرفته، با
+                  استفاده از فناوری‌های رمزنگاری لایه بالا، از داده‌های شما در
+                  برابر حملات DDoS و نفوذهای احتمالی محافظت می‌کنیم.</p>
+              </div>
             </div>
-            <div class="faq-content">
-              <p>ما از سیستم‌های <b> مانیتورینگ فعال و هوشمند </b> بهره
-                می‌بریم که
-                سرور شما را دقیقه به دقیقه برای شناسایی هرگونه فعالیت مشکوک و
-                تلاش برای نفوذ رصد می‌کنند. علاوه بر فایروال‌های پیشرفته، با
-                استفاده از فناوری‌های رمزنگاری لایه بالا، از داده‌های شما در
-                برابر حملات DDoS و نفوذهای احتمالی محافظت می‌کنیم.</p>
-            </div>
-          </div>
 
-          <!-- two -->
-          <div class="faq-item">
-            <div class="faq-header" data-index="1">
-              🕒 سرعت پاسخگویی تیم پشتیبانی شما چقدر است؟
-              <span class="faq-icon">+</span>
+            <!-- two -->
+            <div class="faq-item">
+              <div class="faq-header" data-index="1">
+                🕒 سرعت پاسخگویی تیم پشتیبانی شما چقدر است؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>هدف ما پاسخگویی فوری است. تیم متخصصین ما در
+                  <strong>۲۴/۷</strong> از
+                  طریق
+                  تیکت و چت آنلاین در دسترس هستند. میانگین زمان پاسخ اولیه ما
+                  برای
+                  مشکلات اورژانسی <strong>کمتر از ۱۰ دقیقه</strong> است تا
+                  اطمینان
+                  حاصل شود که
+                  کسب‌وکار آنلاین شما در کمترین زمان ممکن به کار خود ادامه
+                  می‌دهد.</p>
+              </div>
             </div>
-            <div class="faq-content">
-              <p>هدف ما پاسخگویی فوری است. تیم متخصصین ما در <b> ۲۴/۷ </b> از
-                طریق
-                تیکت و چت آنلاین در دسترس هستند. میانگین زمان پاسخ اولیه ما برای
-                مشکلات اورژانسی <b> کمتر از ۱۰ دقیقه </b> است تا اطمینان
-                حاصل شود که
-                کسب‌وکار آنلاین شما در کمترین زمان ممکن به کار خود ادامه
-                می‌دهد.</p>
-            </div>
-          </div>
 
-          <!-- three -->
-          <div class="faq-item">
-            <div class="faq-header" data-index="2">
-              📈 آیا هاستینگ شما ظرفیت مدیریت ترافیک‌های سنگین و ناگهانی را
-              دارد؟
-              <span class="faq-icon">+</span>
+            <!-- three -->
+            <div class="faq-item">
+              <div class="faq-header" data-index="2">
+                📈 آیا هاستینگ شما ظرفیت مدیریت ترافیک‌های سنگین و ناگهانی را
+                دارد؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>بله، زیرساخت <strong>Cloud</strong> ما به شما این اطمینان را
+                  می‌دهد. سرورهای
+                  ما به‌گونه‌ای طراحی شده‌اند که هنگام افزایش ناگهانی ترافیک در
+                  پی
+                  کمپین‌های فروش یا رویدادهای بزرگ، منابع لازم را <strong>به
+                    صورت خودکار
+                    و بدون نیاز به خاموشی</strong> تامین کنند. در نتیجه، سایت
+                  شما هرگز با
+                  خطای کمبود منابع مواجه نخواهد شد.</p>
+              </div>
             </div>
-            <div class="faq-content">
-              <p>بله، زیرساخت **Cloud** ما به شما این اطمینان را می‌دهد. سرورهای
-                ما به‌گونه‌ای طراحی شده‌اند که هنگام افزایش ناگهانی ترافیک در پی
-                کمپین‌های فروش یا رویدادهای بزرگ، منابع لازم را **به صورت خودکار
-                و بدون نیاز به خاموشی** تامین کنند. در نتیجه، سایت شما هرگز با
-                خطای کمبود منابع مواجه نخواهد شد.</p>
-            </div>
-          </div>
 
-          <!-- four -->
-          <div class="faq-item">
-            <div class="faq-header" data-index="3">
-              🔄 آیا انتقال وب‌سایت من از سرویس‌دهنده قبلی به هاست کافه رایگان
-              است؟
-              <span class="faq-icon">+</span>
+            <!-- four -->
+            <div class="faq-item">
+              <div class="faq-header" data-index="3">
+                🔄 آیا انتقال وب‌سایت من از سرویس‌دهنده قبلی به هاست کافه رایگان
+                است؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>بله، تیم فنی ما فرآیند انتقال کامل وب‌سایت شما را از هر
+                  سرویس‌دهنده دیگری به هاست کافه <strong>به صورت کاملاً
+                    رایگان</strong> و در
+                  سریع‌ترین زمان ممکن انجام می‌دهد. این عملیات توسط کارشناسان ما
+                  و
+                  با تضمین <strong>عدم قطعی</strong> یا ایجاد اختلال در عملکرد
+                  سایت شما صورت
+                  می‌گیرد.</p>
+              </div>
             </div>
-            <div class="faq-content">
-              <p>بله، تیم فنی ما فرآیند انتقال کامل وب‌سایت شما را از هر
-                سرویس‌دهنده دیگری به هاست کافه **به صورت کاملاً رایگان** و در
-                سریع‌ترین زمان ممکن انجام می‌دهد. این عملیات توسط کارشناسان ما و
-                با تضمین **عدم قطعی** یا ایجاد اختلال در عملکرد سایت شما صورت
-                می‌گیرد.</p>
-            </div>
-          </div>
 
+            <!-- five -->
+            <div class="faq-item">
+              <div class="faq-header" data-index="4">
+                💿 بک‌آپ‌گیری از داده‌های سایت من با چه فرکانسی انجام می‌شود؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>ما اهمیت داده‌های شما را درک می‌کنیم. سیستم بک‌آپ‌گیری ما به
+                  صورت <strong>روزانه (Daily)</strong> و
+                  <strong>اتوماتیک</strong> از تمامی فایل‌ها و پایگاه‌های داده
+                  شما نسخه پشتیبان تهیه می‌کند. این نسخه‌ها در سرورهای مجزا و
+                  امن نگهداری می‌شوند و شما می‌توانید در هر زمان که نیاز داشتید،
+                  با یک کلیک ساده، سایت خود را به وضعیت قبلی
+                  <strong>بازیابی</strong> کنید.</p>
+              </div>
+            </div>
+
+            <!-- six -->
+            <div class="faq-item">
+              <div class="faq-header" data-index="5">
+                💰 آیا امکان ارتقاء (Upgrade) پلن میزبانی من در آینده وجود دارد؟
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                <p>بله، ارتقاء پلن هاستینگ شما در <strong>هاست کافه</strong>
+                  بسیار آسان و بدون هیچگونه قطعی سرویس انجام می‌شود. شما
+                  می‌توانید هر زمان که کسب‌وکار و ترافیک سایتتان رشد کرد، منابع
+                  خود (مانند حافظه و پهنای باند) را به <strong>پلن
+                    بالاتر</strong> ارتقاء دهید. تنها تفاوت قیمت باقی‌مانده از
+                  دوره فعلی محاسبه خواهد شد.</p>
+              </div>
+            </div>
         </div>
       </div>
     </section>

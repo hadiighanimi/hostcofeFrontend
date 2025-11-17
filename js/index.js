@@ -258,10 +258,8 @@ document.querySelectorAll(".metric-item").forEach((item) => {
   item.style.opacity = "0";
   item.style.transition = "all 0.5s ease";
 });
-/** [محل شروع جاوااسکریپت دینامیک مودال] **/
 
-// ۱. تعریف داده‌ها (JSON-like Structure)
-// این آرایه حاوی تمام اطلاعات قیمت‌گذاری و لینک‌های خرید است.
+// ۱. تعریف داده‌ها
 const hostingPlans = [
   {
     storage: "1 GB",
@@ -321,8 +319,6 @@ function generatePricingTable() {
   });
 }
 
-// ۳. منطق باز و بسته شدن مودال
-// ⬅️ تغییر مهم: اعمال تابع باز شدن روی تمام دکمه‌ها
 openBtns.forEach((button) => {
   button.onclick = function () {
     // هر بار قبل از باز شدن، جدول را از روی داده‌های جدید تولید می‌کنیم
@@ -345,33 +341,13 @@ window.onclick = function (event) {
   }
 };
 
-/** [محل پایان جاوااسکریپت دینامیک مودال] **/
-
 // --- Hero Slider Logic ---
 const slides = document.querySelectorAll(".hero-slide");
 const prevButton = document.getElementById("prevSlide");
 const nextButton = document.getElementById("nextSlide");
-// const paginationContainer = document.getElementById("sliderPagination");
 let currentSlide = 0;
 let autoSlideInterval;
 
-// ۱. تولید نشانگرهای اسلایدر (Pagination Dots)
-function createPagination() {
-  if (slides.length <= 1) return; // اگر تعداد اسلایدها کمتر از ۲ باشد، ناوبری لازم نیست
-
-  slides.forEach((slide, index) => {
-    const dot = document.createElement("span");
-    dot.classList.add("pagination-dot");
-    if (index === 0) {
-      dot.classList.add("active");
-    }
-    dot.addEventListener("click", () => {
-      resetAutoSlide();
-      showSlide(index);
-    });
-    // paginationContainer.appendChild(dot);
-  });
-}
 
 function showSlide(index) {
   if (index >= slides.length) {
@@ -383,18 +359,8 @@ function showSlide(index) {
   }
 
   slides.forEach((slide) => slide.classList.remove("active"));
-  // if (paginationContainer.children.length > 0) {
-  //   document
-  //     .querySelectorAll(".pagination-dot")
-  //     .forEach((dot) => dot.classList.remove("active"));
-  // }
 
   slides[currentSlide].classList.add("active");
-  // if (paginationContainer.children.length > 0) {
-  //   document
-  //     .querySelectorAll(".pagination-dot")
-  //     [currentSlide].classList.add("active");
-  // }
 }
 
 function resetAutoSlide() {
@@ -426,12 +392,46 @@ if (nextButton) {
 
 // ۵. اجرای اولیه - پس از بارگذاری کامل صفحه
 window.addEventListener("load", () => {
-  createPagination();
   showSlide(currentSlide);
   startAutoSlide(); // شروع اتوپلی
 });
 
-// --- Accordion Logic (FAQ) ---
+// scroll domain
+function setupStaggeredScrollReveal() {
+  // انتخاب تمام عناصری که کلاس scroll-reveal دارند
+  const revealElements = document.querySelectorAll(".scroll-reveal");
+
+  // یک مجموعه (Set) برای ردیابی عناصری که قبلاً متحرک شده‌اند
+  const animatedElements = new Set();
+
+  function checkVisibility() {
+    revealElements.forEach((element) => {
+      // اگر قبلاً متحرک شده، دیگر نیازی به بررسی نیست
+      if (animatedElements.has(element)) {
+        return;
+      }
+
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
+        const dataIndex = element.getAttribute("data-index");
+        const delay = (dataIndex ? parseInt(dataIndex) : 0) * 250;
+
+        setTimeout(() => {
+          element.classList.add("is-visible");
+          animatedElements.add(element);
+        }, delay);
+      }
+    });
+  }
+
+  window.addEventListener("load", checkVisibility);
+  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("resize", checkVisibility);
+  checkVisibility();
+}
+setupStaggeredScrollReveal();
+
+// --- Accordion (FAQ) ---
 function setupAccordion() {
   const faqItems = document.querySelectorAll(".faq-item");
   const faqHeaders = document.querySelectorAll(".faq-header");
