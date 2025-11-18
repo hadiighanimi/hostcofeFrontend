@@ -71,10 +71,11 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        background: linear-gradient(135deg,
-                rgba(0, 255, 204, 0.4) 0%,
-                rgba(0, 204, 255, 0.4) 100%);
-        box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        /*background: linear-gradient(135deg,*/
+        /*        rgba(0, 255, 204, 0.4) 0%,*/
+        /*        rgba(0, 204, 255, 0.4) 100%);*/
+        /*box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);*/
+        filter: drop-shadow(0px 3px 10px rgb(97, 212, 250));
     }
 
     .logo-icon img {
@@ -337,11 +338,10 @@
         margin-bottom: 20px;
         line-height: 1.2;
         color: rgb(97, 212, 250);
-        /* حذف استایل‌های background-clip و text-fill-color که از .hero-text به ارث رسیده بودند */
         -webkit-text-fill-color: initial;
         background: none;
         background-clip: initial;
-        text-shadow: 0 0 10px rgb(97, 212, 250);
+        text-shadow: 0 0 5px rgb(97, 212, 250);
     }
 
     .hero-slide .hero-content p {
@@ -2311,7 +2311,7 @@
             <p class="copyright">
                 <b>© کلیه حقوق مادی و معنوی این وب‌سایت متعلق به هاست کافه محفوظ است.</b>
                 | <b>ارائه دهنده راهکارهای میزبانی وب پرسرعت و امن</b>
-                | <b>ارائه شده توسط برنامه نویسان شرکت دیتا پردازش</b>
+                | <b>ارائه شده توسط برنامه نویسان شرکت دیتا پردازش.</b>
             </p>
         </div>
     </footer>
