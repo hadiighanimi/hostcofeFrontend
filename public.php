@@ -87,7 +87,7 @@
     .logo-text {
         font-size: 20px;
         font-weight: 700;
-        background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+        background: linear-gradient(135deg, #ffffff 0%, rgb(97, 212, 250) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -136,7 +136,7 @@
         left: 50%;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, #00ffcc, #00ccff);
+        background: linear-gradient(90deg, rgb(97, 212, 250), #00ccff);
         transform: translateX(-50%);
         box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
         border-radius: 2px;
@@ -146,7 +146,7 @@
         text-decoration: none;
         padding: 8px 16px;
         border-radius: 12px;
-        background-color: #00ffcc;
+        background-color: rgb(97, 212, 250);
         color: #0a0e27 !important;
         transition: all 200ms linear;
         font-size: 15px;
@@ -154,8 +154,7 @@
     }
 
     .login-btn:hover {
-        background: #00e6b8;
-        box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5);
+        box-shadow: 0 4px 10px rgb(97, 212, 250);
         transform: translateY(-2px);
     }
 
@@ -337,12 +336,12 @@
         font-size: 3.5rem;
         margin-bottom: 20px;
         line-height: 1.2;
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
         /* حذف استایل‌های background-clip و text-fill-color که از .hero-text به ارث رسیده بودند */
         -webkit-text-fill-color: initial;
         background: none;
         background-clip: initial;
-        text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        text-shadow: 0 0 10px rgb(97, 212, 250);
     }
 
     .hero-slide .hero-content p {
@@ -402,8 +401,8 @@
     .secondary-btn {
         /* رنگ دکمه ثانویه */
         background-color: transparent;
-        border: 2px solid #00ffcc;
-        color: #00ffcc;
+        border: 2px solid rgb(97, 212, 250);
+        color: rgb(97, 212, 250);
     }
 
     .secondary-btn:hover {
@@ -437,7 +436,7 @@
     }
 
     .slider-nav-btn:hover {
-        background: #00ffcc;
+        background: rgb(97, 212, 250);
         color: #0a0e27;
         transform: translateY(-50%) scale(1.1);
     }
@@ -467,14 +466,14 @@
 }
 
 .pagination-dot:hover {
-  background-color: #00ffcc;
+  background-color: rgb(97, 212, 250);
 }
 
 .pagination-dot.active {
-  background-color: #00ffcc;
+  background-color: rgb(97, 212, 250);
   width: 25px;
   border-radius: 6px;
-  border-color: #00ffcc;
+  border-color: rgb(97, 212, 250);
 } */
 
     .hero-text {
@@ -498,7 +497,7 @@
         font-weight: 700;
         line-height: 1.1;
         margin-bottom: 30px;
-        background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+        background: linear-gradient(135deg, #ffffff 0%, rgb(97, 212, 250) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -666,7 +665,10 @@
     .neon-line {
         position: absolute;
         height: 2px;
-        background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+        background: linear-gradient(90deg,
+                transparent,
+                rgb(97, 212, 250),
+                transparent);
         animation: scan 3s linear infinite;
     }
 
@@ -714,7 +716,7 @@
         font-size: 36px;
         margin-bottom: 40px;
         text-align: center;
-        background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+        background: linear-gradient(135deg, #ffffff 0%, rgb(97, 212, 250) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -755,7 +757,10 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+        background: linear-gradient(90deg,
+                transparent,
+                rgb(97, 212, 250),
+                transparent);
         animation: scan 3s linear infinite;
     }
 
@@ -771,7 +776,7 @@
         width: 40px;
         height: 40px;
         background: linear-gradient(135deg,
-                rgba(0, 255, 204, 0.5),
+                rgb(97, 212, 250),
                 rgba(0, 204, 255, 0.5));
         border-radius: 10px;
         display: flex;
@@ -790,7 +795,7 @@
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 10px;
-        background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+        background: linear-gradient(135deg, #ffffff 0%, rgb(97, 212, 250) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -802,7 +807,7 @@
     }
 
     .btn-host-card {
-        background: #00ffcc;
+        background: rgb(97, 212, 250);
         color: #0a0e27;
         padding: 10px 20px;
         border: none;
@@ -819,7 +824,7 @@
 
     .btn-host-card:hover {
         background: #00e6b8;
-        box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5);
+        box-shadow: 0 6px 15px rgb(97, 212, 250);
         transform: translateY(-2px);
     }
 
@@ -871,7 +876,7 @@
 
     .close-button:hover,
     .close-button:focus {
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
         text-decoration: none;
         cursor: pointer;
     }
@@ -892,9 +897,9 @@
 
     .pricing-table th {
         background-color: rgba(0, 255, 204, 0.1);
-        color: #00ffcc;
-        border-top: 2px solid #00ffcc;
-        border-bottom: 2px solid #00ffcc;
+        color: rgb(97, 212, 250);
+        border-top: 2px solid rgb(97, 212, 250);
+        border-bottom: 2px solid rgb(97, 212, 250);
         text-align: right;
     }
 
@@ -905,7 +910,7 @@
     .modal-btn {
         display: inline-block;
         padding: 8px 15px;
-        background-color: #00ffcc;
+        background-color: rgb(97, 212, 250);
         color: #0a0e27 !important;
         text-decoration: none;
         border-radius: 20px;
@@ -954,7 +959,7 @@
     }
 
     .domain-feature-card:hover {
-        border-color: #00ffcc;
+        border-color: rgb(97, 212, 250);
         transform: translateY(-5px);
     }
 
@@ -967,7 +972,7 @@
     .domain-feature-card h3 {
         font-size: 18px;
         margin-bottom: 10px;
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
     }
 
     .domain-feature-card p {
@@ -979,7 +984,7 @@
     .domain-feature-card .cta-link {
         display: block;
         margin-top: 15px;
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
@@ -1060,7 +1065,7 @@
         width: 60px;
         height: 60px;
         margin: 0 auto 20px;
-        background: linear-gradient(135deg, #00ffcc 0%, #00ccff 100%);
+        background: linear-gradient(135deg, rgb(97, 212, 250) 0%, #00ccff 100%);
         border-radius: 15px;
         display: flex;
         align-items: center;
@@ -1077,7 +1082,7 @@
     .info-value {
         font-size: 28px;
         font-weight: 700;
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
         margin-bottom: 10px;
     }
 
@@ -1131,7 +1136,7 @@
     .form-group input:focus,
     .form-group textarea:focus {
         outline: none;
-        border-color: rgba(0, 255, 204, 0.5);
+        border-color: rgb(97, 212, 250);
         background: rgba(255, 255, 255, 0.08);
         box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
     }
@@ -1148,7 +1153,7 @@
     .contact-info h3 {
         font-size: 24px;
         margin-bottom: 30px;
-        background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+        background: linear-gradient(135deg, #ffffff 0%, rgb(97, 212, 250) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -1176,8 +1181,8 @@
     .contact-icon {
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #00ffcc, #00ccff);
-        border-radius: 12px;
+        background: linear-gradient(135deg, rgb(97, 212, 250), #00ccff);
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1234,7 +1239,7 @@
     }
 
     .faq-item.active .faq-header {
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
     }
 
     .faq-icon {
@@ -1284,17 +1289,7 @@
     .copyright {
         font-size: 14px;
         color: #707070;
-    }
-
-    .copyright a {
-        color: #707070;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .copyright a:hover {
-        color: #00ffcc;
-        text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+        user-select: none;
     }
 
     /* Mobile Menu */
@@ -1362,9 +1357,9 @@
     }
 
     .nav-links-mobile a.active {
-        border-left-color: #00ffcc;
+        border-left-color: rgb(97, 212, 250);
         background: rgba(0, 255, 204, 0.1);
-        color: #00ffcc;
+        color: rgb(97, 212, 250);
     }
 
     /* --- Media Queries - Optimized and Consolidated --- */
@@ -2114,7 +2109,12 @@
 
                 <a href="mailto:info@hostcofe.com" class="contact-item"
                     style="text-decoration: none; color: inherit; direction: rtl;">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" fill="rgba(0,0,0,1)">
+                            <path
+                                d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z">
+                            </path>
+                        </svg></div>
                     <div class="contact-details" style="text-align: right;">
                         <h4>آدرس ایمیل</h4>
                         <p>info@hostcofe.com</p>
@@ -2122,7 +2122,12 @@
                 </a>
 
                 <div class="contact-item phone-block" style="direction: rtl;">
-                    <div class="contact-icon">📞</div>
+                    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" fill="rgba(0,0,0,1)">
+                            <path
+                                d="M4 12H7C8.10457 12 9 12.8954 9 14V19C9 20.1046 8.10457 21 7 21H4C2.89543 21 2 20.1046 2 19V12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12V19C22 20.1046 21.1046 21 20 21H17C15.8954 21 15 20.1046 15 19V14C15 12.8954 15.8954 12 17 12H20C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z">
+                            </path>
+                        </svg></div>
                     <div class="contact-details" style="text-align: right;">
                         <h4>شماره‌های تماس ثابت</h4>
 
@@ -2148,7 +2153,12 @@
 
                 <a href="https://maps.google.com/?q=123+Data+Drive+Suite+100+Analytics+City" target="_blank"
                     rel="noopener" class="contact-item" style="text-decoration: none; color: inherit; direction: rtl;">
-                    <div class="contact-icon">📍</div>
+                    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" fill="rgba(0,0,0,1)">
+                            <path
+                                d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13Z">
+                            </path>
+                        </svg></div>
                     <div class="contact-details" style="text-align: right;">
                         <h4>آدرس دفتر مرکزی</h4>
                         <p>تهران، پاسداران ، نگارستان چهارم، پلاک 4، طبقه دوم</p>
@@ -2156,7 +2166,12 @@
                 </a>
 
                 <div class="contact-item" style="direction: rtl;">
-                    <div class="contact-icon">🕒</div>
+                    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" fill="rgba(0,0,0,1)">
+                            <path
+                                d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM13 12V7H11V14H17V12H13Z">
+                            </path>
+                        </svg></div>
                     <div class="contact-details" style="text-align: right;">
                         <h4>ساعات کاری</h4>
                         <p>
@@ -2294,9 +2309,9 @@
     <footer>
         <div class="footer-content">
             <p class="copyright">
-                © 2026 Graph Page. All rights reserved. Transforming data into
-                insights. | Designed by
-                <a href="https://templatemo.com" rel="nofollow noopener" target="_blank">TemplateMo</a>
+                <b>© کلیه حقوق مادی و معنوی این وب‌سایت متعلق به هاست کافه محفوظ است.</b>
+                | <b>ارائه دهنده راهکارهای میزبانی وب پرسرعت و امن</b>
+                | <b>ارائه شده توسط برنامه نویسان شرکت دیتا پردازش</b>
             </p>
         </div>
     </footer>
