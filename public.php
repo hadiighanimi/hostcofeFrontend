@@ -71,10 +71,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        /*background: linear-gradient(135deg,*/
-        /*        rgba(0, 255, 204, 0.4) 0%,*/
-        /*        rgba(0, 204, 255, 0.4) 100%);*/
-        /*box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);*/
         filter: drop-shadow(0px 3px 10px rgb(97, 212, 250));
     }
 
@@ -278,25 +274,20 @@
         flex-direction: column;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.2);
-        /* backdrop-filter: blur(10px); */
         border-radius: 25px;
         text-align: right;
         padding: 50px;
         z-index: 3;
     }
 
-    /* --- Hero Slider Styling - New Implementation --- */
     .hero-slider-section {
-        /* Overrides or complements existing .hero styles */
         min-height: 75vh;
-        /* ارتفاع حداقل برای بخش هیرو */
         display: flex;
         align-items: center;
         position: relative;
     }
 
     .hero-slider-container {
-        /* کانتینر اصلی اسلایدها */
         width: 100%;
         max-width: 1400px;
         height: 100%;
@@ -316,23 +307,16 @@
         align-items: center;
         padding: 30px 20px;
         opacity: 0;
-        /* مخفی کردن اسلایدها */
         transition: opacity 0.8s ease-in-out;
-        /* انیمیشن فید */
         z-index: 1;
     }
 
     .hero-slide.active {
         opacity: 1;
-        /* نمایش اسلاید فعال */
         z-index: 2;
-        /* اضافه کردن مجدد استایل شفاف موجود در hero-content قبلی */
-        /* background-color: rgba(0, 0, 0, 0.2); */
-        /* backdrop-filter: blur(10px); */
         border-radius: 25px;
     }
 
-    /* Override existing hero-text/h1/p for a cleaner look in slider */
     .hero-slide .hero-content h1 {
         font-size: 3.5rem;
         margin-bottom: 20px;
@@ -448,33 +432,6 @@
     .slider-nav-btn.next {
         left: 5px;
     }
-
-    /* .slider-pagination {
-  bottom: 60px;
-  position: absolute;
-  z-index: 50;
-} */
-
-    /* .pagination-dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.pagination-dot:hover {
-  background-color: rgb(97, 212, 250);
-}
-
-.pagination-dot.active {
-  background-color: rgb(97, 212, 250);
-  width: 25px;
-  border-radius: 6px;
-  border-color: rgb(97, 212, 250);
-} */
 
     .hero-text {
         animation: slideInLeft 1s ease-out;
@@ -1362,7 +1319,6 @@
         color: rgb(97, 212, 250);
     }
 
-    /* --- Media Queries - Optimized and Consolidated --- */
 
     /* Tablet Landscape and large devices (<= 1200px) */
     @media (max-width: 1200px) {
@@ -1384,18 +1340,14 @@
 
     /* Tablet Portrait and smaller devices (<= 992px) */
     @media (max-width: 992px) {
-
-        /* تنظیمات عمومی ناوبری */
         nav.scrolled {
             padding: 15px 20px;
         }
 
-        /* تنظیمات عمومی بخش هیرو (شامل استایل‌های قدیمی و جدید) */
         .hero-slider-section {
             min-height: 65vh;
         }
 
-        /* تنظیمات کروسل هیرو (جدید) */
         .hero-slide {
             flex-direction: column;
             text-align: center;
@@ -1413,9 +1365,7 @@
         }
 
         .hero-content {
-            /* تلفیق منطق 968px و 992px برای .hero-content */
             grid-template-columns: 1fr;
-            /* منطق قدیمی 968px */
             order: 2;
             text-align: center;
             padding: 15px;
@@ -1435,18 +1385,13 @@
             margin-bottom: 20px;
         }
 
-        /* استایل‌های بخش متنی قدیمی ( hero-text ) - برای جلوگیری از شکست */
         .hero-text h1 {
             font-size: 48px;
-            /* منطق 968px */
         }
 
         .hero-text {
             padding-top: 160px;
-            /* منطق 968px */
         }
-
-        /* پایان تنظیمات تلفیقی هیرو */
 
         .cta-buttons {
             flex-direction: column;
@@ -1514,11 +1459,8 @@
         .domain-content-grid {
             display: flex;
             flex-direction: column;
-            /* چیدن آیتم‌ها به صورت دونه دونه */
             align-items: center;
-            /* وسط چین کردن آیتم‌ها در محور اصلی (افقی) */
             gap: 30px;
-            /* حفظ فاصله بین کارت‌ها */
         }
 
         .domain-content-grid .domain-feature-card {
@@ -1545,7 +1487,6 @@
     /* Very Small Mobile Devices (<= 480px) */
     @media (max-width: 450px) {
 
-        /* تنظیمات کروسل هیرو (فونت کوچک‌تر) */
         .hero-slide .hero-content h1 {
             font-size: 1.8rem;
         }
@@ -1562,7 +1503,6 @@
             bottom: 40px;
         }
 
-        /* --- Modal Responsive Adjustments --- */
         .modal-content {
             width: 95%;
             margin: 10% auto;
@@ -1579,7 +1519,6 @@
             top: 5px;
         }
 
-        /* رسپانسیو کردن جدول قیمت‌گذاری با اسکرول افقی */
         .pricing-table-wrapper {
             overflow-x: auto;
             width: 100%;
@@ -2013,63 +1952,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Reports Section -->
-    <!--<section class="reports-section" id="reports">
-      <div class="hosts-container">
-        <h2 class="section-title">Reports & Insights</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">💼</div>
-            <h3 class="info-title">Business Intelligence</h3>
-            <div class="info-value">98.5%</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Accuracy in predictive analytics and business forecasting models.
-            </p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">📱</div>
-            <h3 class="info-title">Mobile Analytics</h3>
-            <div class="info-value">2.4M</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Mobile app downloads and active user engagement metrics.
-            </p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">🌍</div>
-            <h3 class="info-title">Global Reach</h3>
-            <div class="info-value">150+</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Countries actively using our analytics platform worldwide.
-            </p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">🚀</div>
-            <h3 class="info-title">Performance Index</h3>
-            <div class="info-value">847</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Comprehensive performance scoring across all platform metrics.
-            </p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">⚡</div>
-            <h3 class="info-title">Response Time</h3>
-            <div class="info-value">0.2s</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Average API response time ensuring optimal user experience.
-            </p>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">📊</div>
-            <h3 class="info-title">Data Processing</h3>
-            <div class="info-value">12TB</div>
-            <p style="font-size: 14px; color: #a0a0a0">
-              Daily data volume processed through our analytics pipeline.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact" dir="rtl">
